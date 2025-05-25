@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profissional Safe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Adicionei algumas classes personalizadas para tamanhos de fonte e cores,
+           para facilitar a padronização e eventuais ajustes finos que o Tailwind não oferece nativamente de forma tão específica. */
+        .text-hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Título responsivo */
+            line-height: 1.1;
+        }
+        .text-hero-subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* Subtítulo responsivo */
+        }
+        /* REMOVIDO: .button-primary - @apply não funciona com CDN */
+
+        /* Animações CSS (Tailwind JIT compila isso) */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .animate-fade-in-up.delay-200 {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <header class="bg-white shadow-md p-4 flex justify-between items-center fixed w-full z-50 top-0">
+        <a href="#inicio">
+            <img src="https://i.ibb.co/ksC4zRbF/a2b30385-ee0a-47a9-b8b5-22b1ec58adb2-removebg-preview.png" alt="Profissional Safe Logo" class="h-16 md:h-20">
+        </a>
+        <nav class="space-x-6 md:space-x-10 text-lg font-medium">
+            <a href="#inicio" class="hover:text-blue-600 transition duration-200">Início</a>
+            <a href="#sobre" class="hover:text-blue-600 transition duration-200">Sobre Nós</a>
+            <a href="#servicos" class="hover:text-blue-600 transition duration-200">Serviços</a>
+            <a href="#vantagens" class="hover:text-blue-600 transition duration-200">Vantagens</a>
+            <a href="#contato" class="hover:text-blue-600 transition duration-200">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="relative bg-blue-100 min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('https://cdn.discordapp.com/attachments/543913056057688066/1376304502495383753/WhatsApp_Image_2025-05-17_at_13.23.33.jpeg?ex=6834d6f3&is=68338573&hm=3d24e6898d91f857eff171fed5a957098fd5e091c57065d8f40e90a3e9af439b');"></div>
+
+        <div class="relative z-10 text-center text-gray-900 bg-white bg-opacity-80 p-8 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">
+            <h1 class="text-hero-title font-extrabold mb-4 animate-fade-in-down">
+                Segurança do Trabalho com <span class="text-blue-700">Excelência</span>
+            </h1>
+            <p class="text-hero-subtitle mb-8 animate-fade-in-up">
+                Protegendo vidas. Garantindo resultados e a conformidade do seu negócio.
+            </p>
+            <a href="#contato" class="bg-blue-700 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition duration-300 ease-in-out shadow-lg animate-fade-in-up delay-200">
+                Solicite um Orçamento Gratuito
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="p-10 lg:p-20 bg-white grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="order-2 md:order-1">
+            <h3 class="text-3xl lg:text-4xl font-bold text-blue-700 mb-4">Sobre a Profissional Safe</h3>
+            <p class="text-lg leading-relaxed text-gray-700">
+                Somos especialistas em soluções de Segurança do Trabalho, com foco em inovação, qualidade e atendimento personalizado.
+                Unimos tecnologia, conhecimento técnico e paixão para transformar ambientes de trabalho em locais mais seguros,
+                produtivos e em total conformidade com as normas vigentes. Nossa missão é proteger o seu ativo mais valioso:
+                <span class="font-semibold">as pessoas</span>.
+            </p>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center items-center">
+            <img src="https://media.discordapp.net/attachments/543913056057688066/1376318263054827591/9dc2aa56-7035-43d2-8c7b-f9e9f75340e4.png?ex=6834e3c4&is=68339244&hm=7267f97f3264348970b9dfb1bb40a0935c23fca5d36b4077718e51894efb0f29&=&format=webp&quality=lossless&width=822&height=548"
+                 alt="Equipe da Profissional Safe"
+                 class="rounded-xl shadow-xl w-full max-w-sm md:max-w-md lg:max-w-lg object-contain h-auto">
+        </div>
+    </section>
+
+    <section id="vantagens" class="p-10 lg:p-20 bg-blue-50">
+        <h3 class="text-3xl lg:text-4xl font-bold text-center text-blue-700 mb-10">Vantagens que só a Profissional Safe oferece</h3>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/120x120/4a90e2/ffffff?text=Especializacao" alt="Especialização Técnica" class="h-24 w-24 mx-auto mb-6 object-contain">
+                <h4 class="font-bold text-2xl text-gray-900 mb-3">Especialização Técnica</h4>
+                <p class="text-gray-700 leading-relaxed">Profissionais experientes e atualizados nas normas e melhores práticas de Segurança do Trabalho.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/120x120/4a90e2/ffffff?text=Personalizacao" alt="Soluções Personalizadas" class="h-24 w-24 mx-auto mb-6 object-contain">
+                <h4 class="font-bold text-2xl text-gray-900 mb-3">Soluções Personalizadas</h4>
+                <p class="text-gray-700 leading-relaxed">Soluções feitas sob medida para o perfil e necessidade de cada cliente, garantindo eficiência e custo-benefício.</p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:scale-105 transition duration-300">
+                <img src="https://via.placeholder.com/120x120/4a90e2/ffffff?text=Inovacao" alt="Inovação e Qualidade" class="h-24 w-24 mx-auto mb-6 object-contain">
+                <h4 class="font-bold text-2xl text-gray-900 mb-3">Inovação e Qualidade</h4>
+                <p class="text-gray-700 leading-relaxed">Tecnologia, metodologia e paixão para entregar os melhores resultados e superar expectativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="p-10 lg:p-20 bg-white">
+        <h3 class="text-3xl lg:text-4xl font-bold text-center text-blue-700 mb-10">Nossos Serviços</h3>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
+            <ul class="space-y-4 text-xl lg:text-2xl font-medium text-gray-700 list-none">
+                <li class="flex items-start">
+                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Laudos técnicos (PPRA, PCMSO, LTCAT, PGR, PCMAT etc.)
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Treinamentos (NRs, SIPAT, CIPA, Primeiros Socorros e mais)
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Avaliações ambientais (ruído, calor, químicos, ergonomia)
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-7 h-7 text-blue-600 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Consultorias técnicas personalizadas e suporte contínuo
+                </li>
+            </ul>
+            <div class="flex justify-center">
+                <img src="https://media.discordapp.net/attachments/543913056057688066/1376302851067740211/ChatGPT_Image_17_de_mai._de_2025_13_30_36.png?ex=6834d56a&is=683383ea&hm=74f5c06bbd16059a6199aa06076bcff973d71126c570051b76b070de91f002e8&=&format=webp&quality=lossless&width=362&height=544" alt="Serviços" class="rounded-xl shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="p-10 lg:p-20 bg-blue-100">
+        <h3 class="text-3xl lg:text-4xl font-bold text-center text-blue-700 mb-10">Fale Conosco</h3>
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
+            <form class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+                <input type="text" placeholder="Seu nome completo" class="w-full border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500 transition duration-200">
+                <input type="email" placeholder="Seu melhor e-mail" class="w-full border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500 transition duration-200">
+                <input type="tel" placeholder="Seu telefone (DDD+Número)" class="w-full border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500 transition duration-200">
+                <textarea placeholder="Como podemos ajudar? Sua mensagem aqui..." rows="6" class="w-full border-2 border-gray-300 p-3 rounded-lg focus:outline-none focus:border-blue-500 transition duration-200"></textarea>
+                <button type="submit" class="bg-blue-700 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition duration-300 ease-in-out shadow-lg w-full">Enviar Mensagem</button>
+            </form>
+            <div class="flex justify-center items-center">
+                 <img src="https://media.discordapp.net/attachments/543913056057688066/1376302851067740211/ChatGPT_Image_17_de_mai._de_2025_13_30_36.png?ex=6834d56a&is=683383ea&hm=74f5c06bbd16059a6199aa06076bcff973d71126c570051b76b070de91f002e8&=&format=webp&quality=lossless&width=362&height=544" alt="Contato" class="rounded-xl shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-800 text-white p-8 text-center">
+        <p class="mb-2 text-lg">&copy; 2025 Profissional Safe. Todos os direitos reservados.</p>
+        <p class="text-sm">Desenvolvido com <span class="text-red-500">&hearts;</span> para a sua segurança.</p>
+    </footer>
+</body>
+</html>
