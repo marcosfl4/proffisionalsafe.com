@@ -6,18 +6,20 @@
     <title>Profissional Safe</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Adicionei algumas classes personalizadas para tamanhos de fonte e cores,
-           para facilitar a padronização e eventuais ajustes finos que o Tailwind não oferece nativamente de forma tão específica. */
+        .text-biblico{
+            font-size: 12px;
+            font-family: serif;
+        }
         .text-hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Título responsivo */
+            font-size: clamp(2.5rem, 6vw, 4.5rem); 
             line-height: 1.1;
         }
         .text-hero-subtitle {
-            font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* Subtítulo responsivo */
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem); 
         }
-        /* REMOVIDO: .button-primary - @apply não funciona com CDN */
+        
 
-        /* Animações CSS (Tailwind JIT compila isso) */
+   
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -127,7 +129,7 @@
                 </li>
             </ul>
             <div class="flex justify-center">
-                <img src="https://media.discordapp.net/attachments/543913056057688066/1376302851067740211/ChatGPT_Image_17_de_mai._de_2025_13_30_36.png?ex=6834d56a&is=683383ea&hm=74f5c06bbd16059a6199aa06076bcff973d71126c570051b76b070de91f002e8&=&format=webp&quality=lossless&width=362&height=544" alt="Serviços" class="rounded-xl shadow-xl w-full max-w-md">
+                <img src="https://media.discordapp.net/attachments/543913056057688066/1376302849620705370/ChatGPT_Image_17_de_mai._de_2025_13_52_58.png?ex=6834d569&is=683383e9&hm=a0c089242b16912e01d2114a6dda7efc4237364dfe6c50e5a3995f179efdc975&=&format=webp&quality=lossless&width=362&height=544" alt="Serviços">
             </div>
         </div>
     </section>
@@ -150,7 +152,8 @@
 
     <footer class="bg-blue-800 text-white p-8 text-center">
         <p class="mb-2 text-lg">&copy; 2025 Profissional Safe. Todos os direitos reservados.</p>
-        <p class="text-sm">Desenvolvido com <span class="text-red-500">&hearts;</span> para a sua segurança.</p>
+        <p class="text-sm">Desenvolvido com <span class="text-red-500">&hearts;</span> para a sua segurança.</p><br>
+        <p class="text-biblico">"Grandes coisas fez o Senhor por nós, pelas quais estamos alegres"<br>Salmos 126:3</p>
     </footer>
 </body>
 </html>
